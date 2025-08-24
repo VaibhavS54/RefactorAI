@@ -21,7 +21,7 @@ function App() {
   }, [])
 
   async function reviewCode() {
-    const response = await axios.post('https://refactor-ai-nine.vercel.app', { code })
+   const response = await axios.post('/api/get-review', { code }); 
     setReview(response.data)
   }
 
